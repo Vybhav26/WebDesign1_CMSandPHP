@@ -1,0 +1,324 @@
+body,
+html {
+    height: 100%;
+    background-color: #e5dcc3; 
+    color: #333d29; 
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 2vh;
+}
+
+.header-logo {
+    position: absolute;
+    right: 2vw;
+    top: 3.5%;
+    transform: translateY(-10%);
+    height: 8vh;
+    width: auto;
+    filter: brightness(100%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+header {
+    text-align: center;
+    background-color: #333d29;
+    color: #b6ad90;
+    padding: 1.5vh 2vw;
+    font-weight: 600;
+    font-size: 2.5vh;
+    box-shadow: 0 0.3vh 1.2vh rgba(0, 0, 0, 0.5);
+}
+
+/* Subtle section header */
+h2 {
+    padding: 1.5vh 2vw;
+    background-color: #a8b88a;
+    border-left: 0.5vw solid rgba(64, 93, 74, 0.9);
+    border-radius: 1vw;
+    width: fit-content;
+    margin-left: 2%;
+    margin-top: 3vh;
+    font-weight: normal;
+    font-size: 2.8vh;
+}
+
+/* Card */
+.display-formatting {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-width: 50vw;
+    margin: 5vh auto;
+    padding: 6vh 8vw;
+    border-radius: 1vw;
+    border: 1vw solid #b6ad90;
+    box-shadow: 0 0.8vh 2.5vh rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+}
+
+.display-formatting > label {
+    font-size: 2.2vh;
+    margin-bottom: 0.8vh;
+}
+
+hr {
+    height: 2.5vh;
+    background-color: #405d4a;
+    margin: 0.8vh 0;
+}
+
+#email_account,
+#pwd_account {
+    margin: 0 0 2vh 0;
+    text-align: center;
+    pointer-events: none;
+    font-size: 2.2vh;
+    padding: 1vh 2vw;
+    border: 0.1vw solid #ccc;
+    border-radius: 0.5vw;
+    background-color: #f5f5f5;
+}
+
+/* Checkbox container styling */
+.display-formatting br + input[type="checkbox"] {
+    display: inline-block;
+    margin: 1vh 1vw 1vh 0;
+    width: 2.5vh;
+    height: 2.5vh;
+    vertical-align: middle;
+    cursor: pointer;
+    
+}
+
+#Biometric, 
+#PIN{
+    display: inline-block;
+    margin: 1vh 1vw 1vh 0;
+    font-size: 2.2vh;
+    width: 2.5vh;
+    height: 2.5vh;
+    vertical-align: middle;
+    align-self: center;
+}
+
+.txt-checkbox {
+    text-align: center;
+}
+
+
+button {
+    display: block;
+    align-self: center;
+    width: 75%;
+    margin-top: 2.5vh;
+    padding: 1.2vh 1.5vw;
+    background: #7f4f24;
+    color: #b6ad90;
+    border: none;
+    border-radius: 0.8vw;
+    font-weight: 700;
+    font-size: 2vh;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #6a3f1d;
+}
+
+button:active {
+    background: #56321a;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2vw;
+    background-color: #b6ad90;
+    color: #333d29;
+    padding: 1.5vh 2vw;
+    box-shadow: 0 -0.3vh 0.8vh rgba(0, 0, 0, 0.05);
+    margin-top: auto;
+    font-size: 1.8vh;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+    body,
+    html {
+        font-size: 2.2vh;
+    }
+    
+    .header-logo {
+        height: 6vh;
+        right: 4vw;
+    }
+    
+    header {
+        padding: 1.2vh 4vw;
+        font-size: 2.8vh;
+    }
+    
+    h2 {
+        padding: 1.2vh 3vw;
+        border-left-width: 0.7vw;
+        border-radius: 1.5vw;
+        font-size: 3vh;
+        margin-top: 2.5vh;
+        margin-left: 4%;
+    }
+    
+    .display-formatting {
+        width: 70%;
+        max-width: 65vw;
+        padding: 5vh 6vw;
+        border-width: 1.5vw;
+    }
+    
+    .display-formatting > label {
+        font-size: 2.4vh;
+    }
+    
+    #email_account,
+    #pwd_account {
+        font-size: 2.4vh;
+        padding: 1.2vh 2.5vw;
+    }
+    
+    #Biometric,
+    #PIN {
+        width: 2.8vh;
+        height: 2.8vh;
+        font-size: 2.4vh;
+        margin: 1.2vh 1.2vw 1.2vh 0;
+    }
+    
+    button {
+        font-size: 2.2vh;
+        padding: 1.4vh 2vw;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    body,
+    html {
+        font-size: 2.4vh;
+    }
+    
+    .header-logo {
+        height: 5vh;
+        right: 5vw;
+    }
+    
+    header {
+        padding: 1vh 5vw;
+        font-size: 3vh;
+    }
+    
+    h2 {
+        padding: 1vh 4vw;
+        border-left-width: 1vw;
+        border-radius: 2vw;
+        font-size: 3.2vh;
+        margin-top: 2vh;
+        margin-left: 5%;
+    }
+    
+    .display-formatting {
+        width: 85%;
+        max-width: 90vw;
+        padding: 4vh 6vw;
+        margin: 4vh auto;
+        border-width: 2vw;
+        border-radius: 2vw;
+    }
+    
+    .display-formatting > label {
+        font-size: 2.5vh;
+    }
+    
+    hr {
+        height: 2.2vh;
+    }
+    
+    #email_account,
+    #pwd_account {
+        margin-bottom: 1.8vh;
+        font-size: 2.5vh;
+        padding: 1.2vh 3vw;
+    }
+    
+    #Biometric,
+    #PIN {
+        width: 3.2vh;
+        height: 3.2vh;
+        font-size: 2.5vh;
+        margin: 1.5vh 1.5vw 1.5vh 0;
+    }
+    
+    button {
+        width: 85%;
+        font-size: 2.4vh;
+        padding: 1.6vh 3vw;
+        margin-top: 3vh;
+    }
+    
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5vh;
+        padding: 2vh 5vw;
+        font-size: 2vh;
+    }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+    .display-formatting {
+        width: 90%;
+        padding: 3.5vh 6vw;
+        margin: 3vh auto;
+    }
+    
+    h2 {
+        font-size: 3vh;
+        padding: 0.8vh 4vw;
+        margin-left: 4%;
+    }
+    
+    #Biometric,
+    #PIN {
+        width: 3vh;
+        height: 3vh;
+        margin: 1.2vh 1.2vw 1.2vh 0;
+    }
+    
+    button {
+        width: 90%;
+        font-size: 2.2vh;
+        padding: 1.4vh 2.5vw;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .display-formatting {
+        max-width: 40vw;
+    }
+    
+    h2 {
+        border-left-width: 0.4vw;
+    }
+}

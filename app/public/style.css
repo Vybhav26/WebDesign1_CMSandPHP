@@ -1,0 +1,369 @@
+body,
+html {
+    height: 100%;
+    background-color: #e5dcc3; 
+    color: #333d29; 
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 2vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+main {
+    flex-grow: 1;
+}
+
+#header-logo {
+    width: 7.5vw;
+    height: auto;
+    filter: brightness(100%);
+    float: right;
+    transform: translateY(-12.25vh);
+}
+
+.header-logo {
+    position: absolute;
+    right: 2vw;
+    top: 3.5%;
+    transform: translateY(-10%);
+    height: 8vh;
+    width: auto;
+    filter: brightness(100%);
+}
+
+header {
+    text-align: center;
+    background-color: #333d29;
+    color: #b6ad90;
+    padding: 1.5vh 2vw;
+    font-weight: 600;
+    font-size: 2.5vh;
+    box-shadow: 0 0.3vh 1.2vh rgba(0, 0, 0, 0.5);
+}
+
+/* Section Panels */
+.section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 6vh 5vw;
+    background-color: #c2c5aa;
+    border: 0.5vw solid #333d29;
+    border-radius: 3vw;
+    margin: 5vh auto;
+    max-width: 90vw;
+    width: 90%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333d29;
+    font-size: 2.2vh;
+    box-sizing: border-box;
+}
+
+.section:hover {
+    transform: translateY(-0.5vh);
+    box-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.1);
+}
+
+.section hr {
+    border: none;
+    height: 0.2vh;
+    background-color: rgba(51, 61, 41, 0.3);
+    margin: 1.5vh 0;
+}
+
+/* Signup / Display Forms */
+.signup-section,
+.display-formatting {
+    display: flex;
+    padding: 18vh 2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container,
+.display-info {
+    width: 90%;
+    max-width: 100vw;
+    background: #ffffff; 
+    border: 1vw solid #b6ad90;
+    padding: 3vh 2vw;
+    border-radius: 1vw;
+    box-shadow: 0 0.8vh 2.5vh rgba(0, 0, 0, 0.05);
+    color: #333d29;
+    box-sizing: border-box;
+}
+
+.signup-container h2 {
+    margin: 0 0 2vh 0;
+    text-align: center;
+    color: #333d29;
+    font-size: 2.5vh;
+}
+
+.signup-container label {
+    display: block;
+    margin-top: 2vh;
+    font-size: 1.8vh;
+}
+
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"] {
+    width: 100%;
+    padding: 1.5vh 1.5vw;
+    margin-top: 1vh;
+    border: 0.1vw solid #cfcfcf;
+    border-radius: 0.8vw;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+    font-size: 1.8vh;
+}
+
+.signup-container input:focus {
+    outline: none;
+    border-color: #7f4f24;
+}
+
+/* Checkbox */
+.signup-container .checkbox {
+    display: flex;
+    align-items: center;
+    padding: 1vh 0;
+    margin-top: 2vh;
+    font-size: 1.8vh;
+}
+
+/* Buttons */
+button {
+    display: block;
+    width: 100%;
+    margin-top: 2.5vh;
+    padding: 1.5vh 1.5vw;
+    background: #7f4f24;
+    color: #b6ad90;
+    border: none;
+    border-radius: 0.8vw;
+    font-weight: 700;
+    font-size: 1.8vh;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #6a3f1d;
+}
+
+button:active {
+    background: #56321a;
+}
+
+/* Small Text & Links */
+.smallText {
+    text-align: center;
+    margin-top: 2.5vh;
+    color: #333d29;
+    font-size: 1.6vh;
+}
+
+.smallText a {
+    color: #7f4f24;
+    text-decoration: none;
+}
+
+.smallText a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2vw;
+    background-color: #b6ad90;
+    color: #333d29;
+    padding: 1.5vh 2vw;
+    box-shadow: 0 -0.3vh 0.8vh rgba(0, 0, 0, 0.05);
+    margin-top: auto;
+    font-size: 1.6vh;
+}
+
+/* Parallax background */
+.parallax {
+    background-image: url("imgs/background.jpg");
+    min-height: 25vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+    body,
+    html {
+        font-size: 2.2vh;
+    }
+    
+    .section {
+        padding: 4vh 4vw;
+        margin: 3vh auto;
+        border-radius: 4vw;
+        border-width: 0.7vw;
+        font-size: 2.4vh;
+    }
+    
+    .signup-section,
+    .display-formatting {
+        padding: 12vh 3vw;
+    }
+    
+    .signup-container,
+    .display-info {
+        max-width: 60vw;
+        border-width: 1.5vw;
+        padding: 3vh 3vw;
+    }
+    
+    .signup-container h2 {
+        font-size: 3.2vh;
+    }
+    
+    .signup-container label,
+    .signup-container input,
+    button {
+        font-size: 2.2vh;
+    }
+    
+    header {
+        padding: 1.2vh 2vw;
+        font-size: 2.8vh;
+    }
+    
+    .header-logo {
+        height: 6vh;
+        right: 2.5vw;
+    }
+    
+    .parallax {
+        background-attachment: scroll;
+        min-height: 22vh;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    body,
+    html {
+        font-size: 2.4vh;
+    }
+    
+    .signup-container,
+    .display-info {
+        padding: 3vh 4vw ;
+        margin: 2vh 3vw;
+        border-width: 2vw;
+        max-width: 90vw;
+        border-radius: 2vw;
+    }
+    
+    .signup-container h2 {
+        font-size: 3.8vh;
+    }
+    
+    .signup-container label,
+    .signup-container input,
+    button,
+    .signup-container .checkbox {
+        font-size: 2.4vh;
+    }
+    
+    .section {
+        margin: 2.5vh 3vw;
+        padding: 3vh 4vw;
+        border-width: 1vw;
+        border-radius: 5vw;
+        font-size: 2.5vh;
+    }
+    
+    .signup-section,
+    .display-formatting {
+        padding: 8vh 3vw ;
+    }
+    
+    header {
+        padding: 1vh 3vw;
+        font-size: 3vh;
+    }
+    
+    #header-logo {
+        width: 10vw;
+    }
+    
+    .header-logo {
+        height: 5vh;
+        right: 3vw;
+    }
+    
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5vh;
+        padding: 2vh 3vw;
+        font-size: 2vh;
+    }
+    
+    button {
+        padding: 2vh 2vw;
+    }
+    
+    .parallax {
+        min-height: 20vh;
+    }
+    
+    .smallText {
+        font-size: 2vh;
+    }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+    .signup-container,
+    .display-info {
+        padding: 2.5vh 5vw;
+        margin: 0 2vw;
+    }
+    
+    .signup-container h2 {
+        font-size: 3.5vh;
+    }
+    
+    .section {
+        padding: 2.5vh 4vw;
+        margin: 2vh 2vw;
+        font-size: 2.3vh;
+    }
+    
+    button {
+        font-size: 2.2vh;
+        padding: 1.8vh 2vw;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .section {
+        max-width: 70vw;
+    }
+    
+    .signup-container,
+    .display-info {
+        max-width: 30vw;
+    }
+}

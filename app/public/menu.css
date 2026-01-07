@@ -1,0 +1,303 @@
+/*<?php require_once('couch/cms.php'); ?>*/
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Menu Toggle Button */
+.menu-toggle-label {
+    position: absolute;
+    top: 3.75vh;
+    left: 2vw;
+    z-index: 1001;
+    background-color: #7f4f24;
+    border: 0.3vw solid #333d29;
+    border-radius: 1.2vw;
+    padding: 1.5vh 2vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    transition: transform 0.2s ease;
+}
+
+#header-logo {
+    width: 7.5vw;
+    height: auto;
+    position: relative;
+    top: 12vh;
+    right: 1vw;
+    z-index: 1001;
+    padding: 1.5vh 2vw;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    filter: brightness(100%);
+} 
+
+.menu-toggle-label:hover {
+    transform: scale(1.03);
+}
+
+.menu-toggle-icon {
+    width: 3vw;
+    height: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-toggle-icon span {
+    width: 100%;
+    height: 0.3vh;
+    background-color: #e5dcc3;
+    border-radius: 0.2vw;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#menu-toggle:checked ~ .menu-toggle-label .menu-toggle-icon span:nth-child(1) {
+    transform: translateY(1vh) rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-toggle-label .menu-toggle-icon span:nth-child(2) {
+    opacity: 0;
+}
+#menu-toggle:checked ~ .menu-toggle-label .menu-toggle-icon span:nth-child(3) {
+    transform: translateY(-1vh) rotate(-45deg);
+}
+
+.menu-toggle-text {
+    color: #c2c5aa;
+    font-size: 2.2vh;
+    font-weight: bold;
+}
+
+/* Side Menu */
+.side-menu {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 30vw;
+    height: 100vh;
+    background-color: #e5dcc3;
+    border-right: 0.4vw solid #333d29; 
+    padding: 12vh 2vw;
+    transition: 0.3s;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+#menu-toggle:checked ~ .side-menu {
+    left: 0;
+}
+
+/* Menu Items */
+.menu-item {
+    border: 0.3vw solid #333d29;
+    border-radius: 1.2vw;
+    padding: 2vh 2vw;
+    margin-bottom: 2vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.2s;
+    text-decoration: none;
+    background-color: #c2c5aa15;
+}
+
+.menu-item:hover {
+    background-color: #c2c5aa40;
+    transform: translateX(0.5vw);
+}
+
+/*<cms:editable name='u' type='text' label='Name'>*/
+.menu-item-text {
+    color: #333d29;
+    font-size: 2.4vh;
+    font-weight: normal;
+}
+/*</cms:editable>*/
+
+
+.menu-item-icon {
+    width: 3.5vw;
+    height: 3.5vh;
+    background-color: #7f4f24;
+    border-radius: 0.6vw;
+}
+
+/* Log Out */
+.log-out {
+    margin-top: 4vh;
+    padding-left: 2vw;
+}
+
+.log-out a {
+    color: #7f4f24;
+    text-decoration: underline;
+    font-size: 2vh;
+    font-style: italic;
+}
+
+.log-out a:hover {
+    color: #333d29;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    z-index: 999;
+}
+
+#menu-toggle:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+    .menu-toggle-label {
+        top: 1.5vh;
+        left: 2.5vw;
+        padding: 1.2vh 2.5vw;
+    }
+    
+    .menu-toggle-icon {
+        width: 4vw;
+        height: 2.8vh;
+    }
+    
+    .menu-toggle-text {
+        font-size: 2.4vh;
+    }
+    
+    .side-menu {
+        width: 40vw;
+        padding: 10vh 2.5vw;
+    }
+    
+    #header-logo {
+        width: 10vw;
+        top: 10vh;
+    }
+    
+    .menu-item-text {
+        font-size: 2.6vh;
+    }
+    
+    .menu-item-icon {
+        width: 4vw;
+        height: 4vh;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .menu-toggle-label {
+        top: 1vh;
+        left: 3vw;
+        padding: 9vh 3vw;
+        border-radius: 2vw;
+    }
+    
+    .menu-toggle-icon {
+        width: 6vw;
+        height: 300vh;
+    }
+    
+    .menu-toggle-icon span {
+        height: 0.4vh;
+    }
+    
+    .menu-toggle-text {
+        font-size: 2.6vh;
+    }
+    
+    .side-menu {
+        width: 85vw;
+        padding: 10vh 4vw;
+        border-right-width: 0.6vw;
+    }
+    
+    #header-logo {
+        width: 12vw;
+        top: 9vh;
+        right: 2vw;
+    }
+    
+    .menu-item {
+        padding: 1.8vh 3vw;
+        margin-bottom: 1.5vh;
+        border-radius: 2vw;
+    }
+    
+    .menu-item-text {
+        font-size: 2.8vh;
+    }
+    
+    .menu-item-icon {
+        width: 6vw;
+        height: 4vh;
+        border-radius: 1vw;
+    }
+    
+    .log-out {
+        margin-top: 3vh;
+        padding-left: 3vw;
+    }
+    
+    .log-out a {
+        font-size: 2.2vh;
+    }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+    .side-menu {
+        width: 90vw;
+        padding: 8vh 5vw;
+    }
+    
+    .menu-item-text {
+        font-size: 2.6vh;
+    }
+    
+    .menu-item-icon {
+        width: 7vw;
+        height: 90vh;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .side-menu {
+        width: 25vw;
+    }
+    
+    .menu-toggle-icon {
+        width: 2.5vw;
+    }
+    
+    .menu-item-icon {
+        width: 2.5vw;
+        height: 3vh;
+    }
+}
+
+/*<?php COUCH::invoke(); ?>*/

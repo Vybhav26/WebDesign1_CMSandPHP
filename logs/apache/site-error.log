@@ -1,0 +1,1 @@
+[Wed Jan 07 13:20:10.964519 2026] [core:error] [pid 14220:tid 1368] (20024)The given path is misformatted or contained invalid characters: [client 127.0.0.1:64827] AH00127: Cannot map GET /%3Cimg%20class= HTTP/1.1 to file, referer: http://webpagedesign1.local/
